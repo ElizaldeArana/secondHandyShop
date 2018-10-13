@@ -19,22 +19,22 @@ const styles = {
 };
 
 function MediaCard(props) {
-  const { classes } = props;
+  console.log("media",props)
+  const { classes, ropita } = props;
   return (
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={ropita.imagen}
           title="Contemplative Reptile"
         />
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
-            Lizard
+            {ropita.tipo}
           </Typography>
           <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {ropita.descripcion}
           </Typography>
         </CardContent>
       </CardActionArea>

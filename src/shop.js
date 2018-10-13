@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 import MediaCard from './RopitaComponent'
+import Catalog from './catalog'
 
 const drawerWidth = 240;
 
@@ -40,6 +41,7 @@ const styles = theme => ({
 function ClippedDrawer(props) {
   const { classes } = props;
 
+
   return (
     <div className={classes.root}>
       <AppBar position="absolute" className={classes.appBar}>
@@ -61,9 +63,11 @@ function ClippedDrawer(props) {
         <List>{otherMailFolderListItems}</List>
       </Drawer>
       <main className={classes.content}>
-        <div className={classes.toolbar} />
-          <MediaCard></MediaCard>
-          <MediaCard></MediaCard>
+        <div className={classes.toolbar} >
+            <Catalog/>
+
+        </div>
+
         <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
       </main>
     </div>
